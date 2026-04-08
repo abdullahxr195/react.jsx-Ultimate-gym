@@ -8,7 +8,7 @@ export default function MenuCard({image, name }) {
           component="img"
           image={image}
             height="200"
-            width="200"
+            width="400"
             
           />
             <CardContent>

@@ -5,11 +5,13 @@
 }
 
 .hero img {
-  width: 100%;
+  width: 174vh;
   height: 80vh;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
+ 
   margin-top: -150px;
+  margin-left: -100px;
 }
 
 .glow {

@@ -4,7 +4,7 @@ export default function Hero() {
     <>
     <div className="hero">
 
-        <img className="image" src="https://i.pinimg.com/736x/7f/86/ee/7f86ee0d19da38e1cd47b7ff7d65f43f.jpg" alt="" />
+        <img className="image" src="https://i.pinimg.com/736x/89/41/cb/8941cbc71eb5ff4f794cd0541f148a05.jpg" alt="" />
         <h1 className="glow">Ultimate Gym</h1>
 
     </div>
