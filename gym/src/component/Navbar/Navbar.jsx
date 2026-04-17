@@ -13,6 +13,7 @@ export default function Navbar() {
           <a href="#">About</a>
           <a href="#">Contact</a>
           <Button   onClick={()=> navigate('/Register')} variant="contained">Register</Button>
+          <Button   onClick={()=> navigate('/Login')} variant="contained">Login</Button>
         </div>
       </div>
     </>

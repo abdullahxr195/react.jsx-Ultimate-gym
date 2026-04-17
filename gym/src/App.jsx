@@ -4,10 +4,17 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
-import LandingPage from './component/Landing page/LandingPage'
+import LandingPage from './component/Page/Landing page copy/LandingPage'
 import { Toaster } from 'react-hot-toast'
 import Register from './component/Auth/Register'
 import { Routes, Route } from 'react-router-dom'
+import Login from './component/Auth/Login'
+import UserDashboard from './component/user dashboard/UserDashboard'
+import AdminDashboard from './component/Admin Dashboard/AdminDashboard'
+import MenuListPage from './component/Page/Menu List Page/MenuListPage'
+import ProfilePage from './component/Page/Profile Page/ProfilePage'
+import UserDashboardPage from './component/Page/User/UserDashboardPage'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +26,13 @@ function App() {
       <Routes>
       <Route path='/register' element={<Register/>}/>
        <Route path='/' element={<LandingPage/>}/>
+       <Route path='/login' element={<Login/>} />
+      <Route path='/user-dashboard' element={<UserDashboard/>}/>
+      <Route path='/admin-dashboard' element={<AdminDashboard/>}/>
+       <Route path='/view-menu' element={<MenuListPage/>}/>
+        <Route path='/profile' element={<ProfilePage/>}/>
+        <Route path='/user-dashboard-page' element={<UserDashboardPage/>}/>
+        
 
       </Routes>
         
