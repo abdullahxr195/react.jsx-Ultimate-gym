@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
- const[users , setUsers] = useState(null)
+ const[users , setUsers] = useState([])
   const [currentUser, setCurrentUser] = useState(null);
   const navigate = useNavigate();
 

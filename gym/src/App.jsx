@@ -3,17 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-
-import LandingPage from './component/Page/Landing page copy/LandingPage'
 import { Toaster } from 'react-hot-toast'
 import Register from './component/Auth/Register'
 import { Routes, Route } from 'react-router-dom'
 import Login from './component/Auth/Login'
 import UserDashboard from './component/user dashboard/UserDashboard'
 import AdminDashboard from './component/Admin Dashboard/AdminDashboard'
-import MenuListPage from './component/Page/Menu List Page/MenuListPage'
-import ProfilePage from './component/Page/Profile Page/ProfilePage'
-import UserDashboardPage from './component/Page/User/UserDashboardPage'
+import MenuListPage from './Page/Menu List Page/MenuListPage'
+import ProfilePage from './Page/Profile Page/ProfilePage.jsx'
+import UserDashboardPage from './Page/User/UserDashboardPage.jsx'
+import ManageUsersPage from './Page/Manage Users Page/ManageUsersPage.jsx'
+import LandingPage from './Page/Landing page copy/LandingPage'
 
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
        <Route path='/view-menu' element={<MenuListPage/>}/>
         <Route path='/profile' element={<ProfilePage/>}/>
         <Route path='/user-dashboard-page' element={<UserDashboardPage/>}/>
+        <Route path='/Manage-Users-Page' element={<ManageUsersPage/>}/>
         
-
       </Routes>
         
     

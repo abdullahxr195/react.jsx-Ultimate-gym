@@ -3,7 +3,7 @@ import MenuList from "../../Menus/MenuList";
 import Navbar from "../../Navbar/Navbar";
 import Sidebar from "../../Sidebar/Sidebar";
 import { Box } from "@mui/material";
-import Profile from "../../Profile Component/Profile";
+import profile from './Profile Component/Profile'
 
 
 export default function ProfilePage(){
