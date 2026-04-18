@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MenuList from "../Menu List Page/MenuListPage.jsx";
-import Navbar from "../../Navbar/Navbar";
-import Sidebar from "../../Sidebar/Sidebar";
+import MenuList from "../../component/Menus/MenuList";
+import Navbar from "../../component/Navbar/Navbar";
+import Sidebar from "../../component/Sidebar/Sidebar";
 import { Box } from "@mui/material";
 
 export default function MenuListPage(){

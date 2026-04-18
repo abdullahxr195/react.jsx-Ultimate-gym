@@ -1,9 +1,9 @@
 import { useState } from "react";
-import MenuList from "../../Menus/MenuList";
-import Navbar from "../../Navbar/Navbar";
-import Sidebar from "../../Sidebar/Sidebar";
+import MenuList from "../../component/Menus/MenuList.jsx";
+import Navbar from "../../component/Navbar/Navbar.jsx";
+import Sidebar from "../../component/Sidebar/Sidebar.jsx";
 import { Box } from "@mui/material";
-import profile from './Profile Component/Profile'
+import profile from '../../component/Profile Component/Profile.jsx'
 
 
 export default function ProfilePage(){

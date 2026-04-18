@@ -1,5 +1,5 @@
-import Navbar from "../../Navbar/Navbar";
-import UserDashboard from "../../user dashboard/UserDashboard";
+import Navbar from "../../component/Navbar/Navbar";
+import UserDashboard from "../../component/user dashboard/UserDashboard";
 
 
 

@@ -7,13 +7,13 @@ import { Toaster } from 'react-hot-toast'
 import Register from './component/Auth/Register'
 import { Routes, Route } from 'react-router-dom'
 import Login from './component/Auth/Login'
-import UserDashboard from './component/user dashboard/UserDashboard'
-import AdminDashboard from './component/Admin Dashboard/AdminDashboard'
-import MenuListPage from './Page/Menu List Page/MenuListPage'
+import UserDashboard from './component/user dashboard/UserDashboard.jsx'
+import AdminDashboard from './component/Admin Dashboard/AdminDashboard.jsx'
+import MenuListPage from './Page/Menu List Page/MenuListPage.jsx'
 import ProfilePage from './Page/Profile Page/ProfilePage.jsx'
 import UserDashboardPage from './Page/User/UserDashboardPage.jsx'
 import ManageUsersPage from './Page/Manage Users Page/ManageUsersPage.jsx'
-import LandingPage from './Page/Landing page copy/LandingPage'
+import LandingPage from './Page/Landing page copy/LandingPage.jsx'
 
 
 function App() {

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import MenuList from "../../Menus/MenuList";
-import Navbar from "../../Navbar/Navbar";
-import Sidebar from "../../Sidebar/Sidebar";
 import { Box } from "@mui/material";
-import ManageUsers from "../../Users/ManageUsers";
+import MenuList from "../../component/Menus/MenuList.jsx";
+import Navbar from "../../component/Navbar/Navbar.jsx";
+import Sidebar from "../../component/Sidebar/Sidebar.jsx";
+import ManageUsers from "../../component/Users/ManageUsers.jsx";
 
 export default function ManageUsersPage(){
 

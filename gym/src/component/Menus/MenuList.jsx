@@ -1,5 +1,5 @@
 import { Container, Grid, Typography } from "@mui/material";
-import MenuCard from "../Menus/MenuCard.jsx";
+import MenuCard from "../../component/Menus/MenuCard";
 export default function MenuList() {
   const menuList = [
     {

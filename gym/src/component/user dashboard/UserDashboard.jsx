@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import { UserContext } from "../User page/UserContext.jsx";
 import { useContext, useState } from "react";
-import Sidebar from "../Sidebar/Sidebar.jsx";
-import Navbar from "../Navbar/Navbar.jsx";
+import Sidebar from "../../component/Sidebar/Sidebar.jsx";
+import Navbar from "../../component/Navbar/Navbar.jsx";
 
 
 
