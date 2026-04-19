@@ -14,8 +14,18 @@ export const UserProvider = ({ children }) => {
     const existedUsers = JSON.parse(localStorage.getItem("users"));
     if (existedUsers) {
       setUsers(existedUsers);
-      return;
+      
     }
+
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+
+      if(user){
+
+        setCurrentUser(user);
+
+      }
+
+
   }, []);
 
   const register = (formData) => {

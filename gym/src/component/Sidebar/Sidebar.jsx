@@ -57,7 +57,7 @@ export default function Sidebar({ open, toggleSidebar }) {
               <ListItem button>
                 <ListItemText
                   sx={{ cursor: "pointer" }}
-                  primary={open ? "Users" : "A"}
+                  primary={open ? "Users" : "U"}
                    onClick={() => navigate("/Manage-Users-Page")}
                 />
               </ListItem>
@@ -84,7 +84,7 @@ export default function Sidebar({ open, toggleSidebar }) {
                 <ListItemText
                   sx={{ cursor: "pointer" }}
                   primary={open ? "Dashboard" : "D"}
-                  onClick={() => navigate("user-dashboard")}
+                  onClick={() => navigate("/user-dashboard")}
                 />
               </ListItem>
 

@@ -4,35 +4,21 @@ import { useContext, useState } from "react";
 import Sidebar from "../../component/Sidebar/Sidebar.jsx";
 import Navbar from "../../component/Navbar/Navbar.jsx";
 
+export default function UserDashboard() {
+  const [open, setOpen] = useState(false);
+  const toggleSidebar = () => {
+    setOpen(!open);
+  };
 
+  const { currentUser } = useContext(UserContext);
+  console.log(currentUser);
 
-export default function UserDashboard(){
-
-     const [open , setOpen] = useState(false)
-        const toggleSidebar=()=>{
-    
-            setOpen(!open)
-    
-        }
-
-
-
-    const {currentUser} = useContext(UserContext);
-    console.log(currentUser);
-
-
-
-return(
+  return (
     <>
-     <Navbar/>
-     
-     
-   
-    <Typography variant="h2">hi,{currentUser?.name}</Typography>
-   <Sidebar open={open} toggleSidebar={toggleSidebar}/>
+      <Navbar />
+
+      <Typography variant="h2">hi,{currentUser?.name}</Typography>
+      <Sidebar open={open} toggleSidebar={toggleSidebar} />
     </>
-)
-
-
-
-}  
+  );
+}

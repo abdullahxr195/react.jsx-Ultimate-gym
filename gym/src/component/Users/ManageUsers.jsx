@@ -34,7 +34,7 @@ export default function ManageUsers() {
               <TableCell>Actions</TableCell>
             </TableHead>
 
-            {users.map((users, idx) => {
+            {users.map((user, idx) => {
               return (
                 <TableBody key={user?.id}>
 

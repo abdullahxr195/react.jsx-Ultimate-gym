@@ -4,6 +4,7 @@ import Navbar from "../../component/Navbar/Navbar.jsx";
 import Sidebar from "../../component/Sidebar/Sidebar.jsx";
 import { Box } from "@mui/material";
 import profile from '../../component/Profile Component/Profile.jsx'
+import Profile from "../../component/Profile Component/Profile.jsx";
 
 
 export default function ProfilePage(){
