@@ -5,7 +5,7 @@ import { UserContext } from "../User page/UserContext";
 import { useContext } from "react";
 export default function Navbar() {
   const navigate = useNavigate();
-  const { currentUser } = useContext(UserContext);
+  const { currentUser, logout } = useContext(UserContext);
   return (
     <>
       <div className="navbar">
@@ -18,14 +18,16 @@ export default function Navbar() {
           {currentUser ? (
             <>
               {" "}
-              <Button variant="contained">Logout</Button>
+              <Button variant="contained" onClick={logout}>
+                Logout
+              </Button>
             </>
           ) : (
             <>
-              <Button onClick={() => navigate("/Register")} variant="contained">
+              <Button variant="contained" onClick={() => navigate("/Register")}>
                 Register
               </Button>
-              <Button onClick={() => navigate("/Login")} variant="contained">
+              <Button variant="contained" onClick={() => navigate("/Login")}>
                 Login
               </Button>
             </>
