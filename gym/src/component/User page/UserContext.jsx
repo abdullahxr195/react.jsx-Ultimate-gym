@@ -53,7 +53,6 @@ export const UserProvider = ({ children }) => {
     }
 
     localStorage.setItem("currentUser", JSON.stringify(isExist));
-    
   };
 
   const logout = () => {
@@ -98,9 +97,88 @@ export const UserProvider = ({ children }) => {
     return;
   };
 
+  const deleteUsers = (userId) => {
+    const existedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const updatedUsers = existedUsers.filter((user) => userId !== user.id);
+
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+    setUsers(updatedUsers);
+    toast.success("deleted successfully");
+  };
+
+  const addNewUser = (userData) => {
+    const allowedRoles = ["user", "admin"];
+
+    if (
+      !userData.name ||
+      !userData.email ||
+      !userData.role ||
+      !userData.password
+    ) {
+      toast.error("all fields are required");
+      return;
+    }
+
+    if (!allowedRoles.includes(userData.role.toLowerCase())) {
+      toast.error("The Role must be user or admin only!");
+      return;
+    }
+
+    if (userData.password.length < 8) {
+      toast.error("Password must be at least 8 characters long");
+      return;
+    }
+
+    const allUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const isExist = allUsers.find((user) => user.email === userData.email);
+
+    if (isExist) {
+      toast.error("The email is already exist ! ask user to login");
+      return;
+    }
+
+    const newUser = {
+      id: Date.now(),
+      name: userData.name,
+      email: userData.email,
+      password: userData.password,
+      role: userData.role.toLowerCase(),
+    };
+
+    const updatedUsers = [...allUsers, newUser];
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+    toast.success("user created successfully user can login");
+    setUsers(updatedUsers);
+    return;
+  };
+
+  const updateUser = (userId, updatedData) => {
+    const existedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const updatedUsers = existedUsers.map((user) => {
+      if (user.id === userId) {
+        return { ...user, ...updatedData };
+      }
+
+      return user;
+    });
+
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+    setUsers(updatedUsers);
+    toast.success("updated Successfully");
+  };
+
   return (
     <UserContext.Provider
-      value={{ users, register, login, currentUser, logout }}
+      value={{
+        users,
+        register,
+        login,
+        currentUser,
+        logout,
+        deleteUsers,
+        addNewUser,
+        updateUser,
+      }}
     >
       {children}
     </UserContext.Provider>

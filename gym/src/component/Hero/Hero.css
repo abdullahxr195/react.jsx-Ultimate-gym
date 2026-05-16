@@ -1,35 +1,48 @@
-.hero {
-  position: relative;
-  padding-top: 150px;
-  width: 100%;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero img {
-  width: 174vh;
-  height: 80vh;
-  object-fit: fill;
-  display: block;
- 
-  margin-top: -150px;
-  margin-left: -100px;
+* {
+  box-sizing: border-box;
 }
 
-.glow {
-  font-size: 10vh;
-  text-align: center;
-  margin: -50px;
-  margin-left:40px ;
+.image {
+  background-image: url("https://i.pinimg.com/736x/7f/86/ee/7f86ee0d19da38e1cd47b7ff7d65f43f.jpg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
   color: rgb(0, 0, 0);
+   
   font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: glow 1.5s infinite alternate;
-  
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  animation: text 1.5s infinite alternate;
 }
 
-@-webkit-keyframes glow {
+
+h1{
+
+font-size: 20vh;
+
+
+}
+
+@-webkit-keyframes text {
   from {
     text-shadow:
       0 0 10px #fff,
@@ -51,8 +64,4 @@
       0 0 70px #0d20cdd0,
       0 0 80px #0d20cdd0;
   }
-}
-body {
-  margin: 0;
-  padding: 0;
 }

@@ -25,6 +25,7 @@ export default function Sidebar({ open, toggleSidebar }) {
           bgcolor: "red",
           color: "white",
           minHeight: "100vh",
+          backgroundColor:"#001e37",  
           width: open ? "280px" : "60px",
           transition: "with 0.3s ease",
           p: 2,
@@ -65,7 +66,8 @@ export default function Sidebar({ open, toggleSidebar }) {
               <ListItem button>
                 <ListItemText
                   sx={{ cursor: "pointer" }}
-                  primary={open ? "Menu" : "M"}
+                  primary={open ? "View Menu" : "V"}
+                  onClick={() => navigate("/view-menu")}
                 />
               </ListItem>
 
@@ -73,6 +75,7 @@ export default function Sidebar({ open, toggleSidebar }) {
                 <ListItemText
                   sx={{ cursor: "pointer" }}
                   primary={open ? "Profile" : "P"}
+                  onClick={() => navigate("/Profile")}
                 />
               </ListItem>
             </>
@@ -88,13 +91,13 @@ export default function Sidebar({ open, toggleSidebar }) {
                 />
               </ListItem>
 
-              <ListItem button>
+              {/* <ListItem button>
                 <ListItemText
                   sx={{ cursor: "pointer" }}
                   primary={open ? "Users" : "U"}
                  
                 />
-              </ListItem>
+              </ListItem> */}
 
               <ListItem button>
                 <ListItemText

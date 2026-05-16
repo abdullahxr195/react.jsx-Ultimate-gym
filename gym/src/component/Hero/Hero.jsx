@@ -1,16 +1,17 @@
-import "../Hero/Hero.css"
+import "../Hero/Hero.css";
 export default function Hero() {
   return (
     <>
-    <div className="hero">
+      <div className="image">
 
-        <img className="image" src="https://i.pinimg.com/736x/89/41/cb/8941cbc71eb5ff4f794cd0541f148a05.jpg" alt="" />
-        <h1 className="glow">Ultimate Gym</h1>
+      <img src="https://i.pinimg.com/736x/7f/86/ee/7f86ee0d19da38e1cd47b7ff7d65f43f.jpg" alt="" />
+      </div>
 
-    </div>
-    
-    
-    
+      <div className="text">
+        
+        <h1>ULTIMATE GYM</h1>
+       
+      </div>
     </>
-    );
+  );
 }

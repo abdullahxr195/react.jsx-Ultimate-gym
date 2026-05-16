@@ -8,13 +8,15 @@ import Navbar from '../../component/Navbar/Navbar.jsx'
 
 
 
+
 export default function LandingPage(){
 
  return(
  <>
 <Navbar/>
 <Hero/>
-<MenuList/>
+{/* <MenuList/> */}
+
     
   
 </>

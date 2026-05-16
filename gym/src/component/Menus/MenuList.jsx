@@ -1,96 +1,490 @@
-import { Container, Grid, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardActions from "@mui/material/CardActions";
 import MenuCard from "../../component/Menus/MenuCard";
+import { Box, Container, Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 export default function MenuList() {
-  const menuList = [
-    {
-      id: 0,
-      name: "chest",
-      image:"https://i.pinimg.com/1200x/75/c1/23/75c123dc30439199362e5801d05375eb.jpg"
-    },
+  const navigate = useNavigate();
 
-    {
-      id: 1,
-      name: "back",
-      image:"https://i.pinimg.com/736x/e5/80/61/e58061c1bb0e7b253523b3e448b00d46.jpg"
-    },
-
-    {
-      id: 2,
-      name: "Biceps",
-      image:"https://i.pinimg.com/736x/33/76/15/3376157894be15d51c0646cc3dbe3dac.jpg"
-    },
-
-    {
-      id: 3,
-      name: "Triceps",
-      image:"https://i.pinimg.com/1200x/f0/54/58/f054584703c1e0819985c85b5704d657.jpg"
-    },
-
-    {
-      id: 4,
-      name: "Shoulders",
-      image:"https://i.pinimg.com/1200x/cf/23/77/cf2377c838ef93a691407a48ef9ce660.jpg"
-    },
-
-    {
-      id: 5,
-      name: "Legs",
-      image:"https://i.pinimg.com/736x/f7/63/1a/f7631ae1e74a699f3d245f096375fe77.jpg"
-    },
-
-    {
-      id: 6,
-      name: "Ads",
-      image:"https://i.pinimg.com/1200x/81/26/a5/8126a5dbfbc1b7fc65da4aec3cd32412.jpg"
-    },
-
-    {
-      id: 7,
-      name: "forearms",
-      image:"https://i.pinimg.com/736x/45/60/01/4560015b441a15962ef7a1d2601e5b89.jpg"
-    },
-
-    {
-      id: 8,
-      name: "Calves",
-      image:"https://i.pinimg.com/736x/0f/71/ea/0f71ea61894d62551bac90692fe82424.jpg"
-    },
-
-    {
-      id: 9,
-      name: "Neck",
-      image:"https://i.pinimg.com/1200x/b9/ef/75/b9ef754e3bcd21744e30738be6f2caea.jpg"
-    },
-
-    {
-      id: 10,
-      name: "Glutes",
-      image:"https://i.pinimg.com/1200x/0e/e2/25/0ee225dadde0096ef9f595cc52300100.jpg"
-    },
-
-    {
-      id: 11,
-      name: "Kardio",
-      image:"https://i.pinimg.com/736x/e0/74/fb/e074fbc9d3166158a4a4faa84ccfd13d.jpg"
-    },
-  ];
 
   return (
     <>
-      <Container sx={{ py: 8 }}>
-        <Typography variant="h1">
-          
-        </Typography>
-        <Grid container spacing={6}>
-          {menuList.map((Exercise) => {
-            return(
-              <Grid item key={Exercise.id}>
-                <MenuCard name={Exercise.name} image={Exercise.image} />
-              </Grid>
-            )
-          })}
-        </Grid>
-      </Container>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          backgroundColor: (theme) => theme.palette.background.default,
+          padding: 2,
+        }}
+      >
+        <Card
+          sx={{
+            maxWidth: 380,
+            borderRadius: 3,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s ease-in-out",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Athlete working out in a modern gym"
+            height="200"
+            image="https://my.lyfta.app/icons/muscles/ic_chip_chest_b.svg"
+            title="Gym Workout"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
+              Chest
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ lineHeight: 1.6 }}
+            >
+              Unlock unlimited access to state-of-the-art equipment, expert-led
+              classes, and personalized training programs designed to help you
+              achieve your goals. Join our vibrant community today!
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "space-between", padding: 2 }}>
+            <Button
+              onClick={() => navigate("/view-card-chest")}
+              size="medium"
+              variant="contained"
+              color="primary"
+              sx={{
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.secondary.dark,
+                },
+              }}
+            >
+              Join Now
+            </Button>
+            
+          </CardActions>
+        </Card>
+      </Box>
+      {/* /////////////////////////////////////////////////////////////////////// */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          backgroundColor: (theme) => theme.palette.background.default,
+          padding: 2,
+        }}
+      >
+        <Card
+          sx={{
+            maxWidth: 380,
+            borderRadius: 3,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s ease-in-out",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Athlete working out in a modern gym"
+            height="200"
+            image="https://my.lyfta.app/icons/muscles/ic_chip_back_b.svg"
+            title="Gym Workout"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
+              Back
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ lineHeight: 1.6 }}
+            >
+              Unlock unlimited access to state-of-the-art equipment, expert-led
+              classes, and personalized training programs designed to help you
+              achieve your goals. Join our vibrant community today!
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "space-between", padding: 2 }}>
+            <Button
+              onClick={() => navigate("/view-card-back")}
+              size="medium"
+              variant="contained"
+              color="primary"
+              sx={{
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.secondary.dark,
+                },
+              }}
+            >
+              Join Now
+            </Button>
+
+          </CardActions>
+        </Card>
+      </Box>
+      {/* /////////////////////////////////////////////////////////////////////// */}
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          backgroundColor: (theme) => theme.palette.background.default,
+          padding: 2,
+        }}
+      >
+        <Card
+          sx={{
+            maxWidth: 380,
+            borderRadius: 3,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s ease-in-out",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Athlete working out in a modern gym"
+            height="200"
+            image="https://my.lyfta.app/icons/muscles/chip_biceps_b.svg"
+            title="Gym Workout"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
+              Biceps
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ lineHeight: 1.6 }}
+            >
+              Unlock unlimited access to state-of-the-art equipment, expert-led
+              classes, and personalized training programs designed to help you
+              achieve your goals. Join our vibrant community today!
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "space-between", padding: 2 }}>
+            <Button onClick={() => navigate("/view-card-biceps")}
+              size="medium"
+              variant="contained"
+              color="primary"
+              sx={{
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.secondary.dark,
+                },
+              }}
+            >
+              Join Now
+            </Button>
+            
+          </CardActions>
+        </Card>
+      </Box>
+      {/* /////////////////////////////////////////////////////////////////////// */}
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          backgroundColor: (theme) => theme.palette.background.default,
+          padding: 2,
+        }}
+      >
+        <Card
+          sx={{
+            maxWidth: 380,
+            borderRadius: 3,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s ease-in-out",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Athlete working out in a modern gym"
+            height="200"
+            image="https://my.lyfta.app/icons/muscles/chip_triceps_b.svg"
+            title="Gym Workout"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
+              Triceps
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ lineHeight: 1.6 }}
+            >
+              Unlock unlimited access to state-of-the-art equipment, expert-led
+              classes, and personalized training programs designed to help you
+              achieve your goals. Join our vibrant community today!
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "space-between", padding: 2 }}>
+            <Button onClick={()=> navigate ("/view-card-triceps")}
+              size="medium"
+              variant="contained"
+              color="primary"
+              sx={{
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.secondary.dark,
+                },
+              }}
+            >
+              Join Now
+            </Button>
+           
+          </CardActions>
+        </Card>
+      </Box>
+      {/* /////////////////////////////////////////////////////////////////////// */}
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          backgroundColor: (theme) => theme.palette.background.default,
+          padding: 2,
+        }}
+      >
+        <Card
+          sx={{
+            maxWidth: 380,
+            borderRadius: 3,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s ease-in-out",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Athlete working out in a modern gym"
+            height="200"
+            image="https://my.lyfta.app/icons/muscles/ic_chip_shoulders_b.svg"
+            title="Gym Workout"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
+              Shoulders
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ lineHeight: 1.6 }}
+            >
+              Unlock unlimited access to state-of-the-art equipment, expert-led
+              classes, and personalized training programs designed to help you
+              achieve your goals. Join our vibrant community today!
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "space-between", padding: 2 }}>
+            <Button onClick={() => navigate("/view-card-shoulders")}
+              size="medium"
+              variant="contained"
+              color="primary"
+              sx={{
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.secondary.dark,
+                },
+              }}
+            >
+              Join Now
+            </Button>
+
+          </CardActions>
+        </Card>
+      </Box>
+      {/* /////////////////////////////////////////////////////////////////////// */}
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          backgroundColor: (theme) => theme.palette.background.default,
+          padding: 2,
+        }}
+      >
+        <Card
+          sx={{
+            maxWidth: 380,
+            borderRadius: 3,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s ease-in-out",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Athlete working out in a modern gym"
+            height="200"
+            image="https://my.lyfta.app/icons/muscles/chip_quadriceps_b.svg"
+            title="Gym Workout"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
+              Legs
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ lineHeight: 1.6 }}
+            >
+              Unlock unlimited access to state-of-the-art equipment, expert-led
+              classes, and personalized training programs designed to help you
+              achieve your goals. Join our vibrant community today!
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "space-between", padding: 2 }}>
+            <Button onClick={() => navigate("/view-card-legs")}
+              size="medium"
+              variant="contained"
+              color="primary"
+              sx={{
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.secondary.dark,
+                },
+              }}
+            >
+              Join Now
+            </Button>
+           
+          </CardActions>
+        </Card>
+      </Box>
+      {/* /////////////////////////////////////////////////////////////////////// */}
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          backgroundColor: (theme) => theme.palette.background.default,
+          padding: 2,
+        }}
+      >
+        <Card
+          sx={{
+            maxWidth: 380,
+            borderRadius: 3,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s ease-in-out",
+            "&:hover": {
+              transform: "translateY(-5px)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt="Athlete working out in a modern gym"
+            height="200"
+            image="https://my.lyfta.app/icons/muscles/chip_abs_b.svg"
+            title="Gym Workout"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ fontWeight: "bold" }}
+            >
+              Waist
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ lineHeight: 1.6 }}
+            >
+              Unlock unlimited access to state-of-the-art equipment, expert-led
+              classes, and personalized training programs designed to help you
+              achieve your goals. Join our vibrant community today!
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: "space-between", padding: 2 }}>
+            <Button onClick={() => navigate("/view-card-waist")}
+              size="medium"
+              variant="contained"
+              color="primary"
+              sx={{
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.secondary.dark,
+                },
+              }}
+            >
+              Join Now
+            </Button>
+           
+          </CardActions>
+        </Card>
+      </Box>
+      {/* /////////////////////////////////////////////////////////////////////// */}
+
     </>
   );
 }

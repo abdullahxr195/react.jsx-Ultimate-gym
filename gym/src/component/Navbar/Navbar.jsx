@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../User page/UserContext";
 import { useContext } from "react";
+
 export default function Navbar() {
   const navigate = useNavigate();
   const { currentUser, logout } = useContext(UserContext);
@@ -12,9 +13,9 @@ export default function Navbar() {
         <p className=" logo">Ultimate gym</p>
 
         <div className="link">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          
+          <Button onClick={() => navigate("/about-Page")} variant="contained" color="error">About</Button>
+          <Button variant="contained" color="error">Contact</Button>
           {currentUser ? (
             <>
               {" "}
