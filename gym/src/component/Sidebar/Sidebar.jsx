@@ -25,7 +25,7 @@ export default function Sidebar({ open, toggleSidebar }) {
           bgcolor: "red",
           color: "white",
           minHeight: "100vh",
-          backgroundColor:"#001e37",  
+          backgroundColor:"rgba(0, 0, 0, 0.95)",  
           width: open ? "280px" : "60px",
           transition: "with 0.3s ease",
           p: 2,

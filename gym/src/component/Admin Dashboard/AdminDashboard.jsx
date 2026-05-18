@@ -3,6 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import UserDashboard from "../user dashboard/UserDashboard";
+import Footer from "../Footer/footer";
 
 export default function AdminDashboard() {
   const [open, setOpen] = useState(false);
@@ -27,6 +28,7 @@ export default function AdminDashboard() {
         <Box sx={{ flexGrow: 1 }}>
           
           <UserDashboard/>
+          
         </Box>
       </Box>
     </>

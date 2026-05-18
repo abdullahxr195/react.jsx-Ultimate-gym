@@ -4,6 +4,7 @@ import Sidebar from "../../component/Sidebar/Sidebar";
 import Navbar from "../../component/Navbar/Navbar";
 import MenuList from "../../component/Menus/MenuList";
 import { useState } from "react";
+import Footer from "../../component/Footer/footer";
 
 export default function ViewCardBack() {
   const [open, setOpen] = useState(true);
@@ -168,6 +169,7 @@ export default function ViewCardBack() {
               })}
             </Grid>
           </Container>
+          
         </Box>
       </Box>
     </>
