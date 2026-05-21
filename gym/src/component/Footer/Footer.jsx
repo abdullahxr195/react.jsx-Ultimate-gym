@@ -7,17 +7,12 @@ export default function Footer() {
   return (
     <>
     <Box className="footer">
-      <Container>
+      
         
           <ul>
             <li>
-              <a  href="#about us"
-                onClick={() => navigate("/about-Page")}>
-                
-              </a>
+              <a  href="#about us" onClick={() => navigate("/about-Page")}>about us</a>
                
-                about us
-              
             </li>
           </ul>
           <ul>
@@ -37,8 +32,8 @@ export default function Footer() {
 
           <ul>
             <li>
-              <a  href="#email:Ruby Restaurant@gmail.com">
-                email:Ruby Restaurant@gmail.com
+              <a  href="#email: Ultimate Gym@gmail.com">
+                email:Ultimate Gym@gmail.com
               </a>
             </li>
           </ul>
@@ -57,7 +52,6 @@ export default function Footer() {
             </li>
           </ul>
         
-      </Container>
       </Box>
     </>
   );

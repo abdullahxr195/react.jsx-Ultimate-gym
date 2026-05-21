@@ -1,6 +1,22 @@
 .footer{
 
-background-color: aqua;
+background-color: rgb(16, 20, 15);
+padding-top: 15vh;
+height: 10%;
 
+}
+
+ul{
+display:inline-block;
+list-style: none;
+
+color: rgb(241, 149, 21);
+}
+
+a{
+
+text-decoration: none;
+font-size: 3vh;
+color: AliceBlue;
 
 }

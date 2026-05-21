@@ -22,7 +22,8 @@ export default function UserDashboard() {
     {
       id: 0,
       name: "15$",
-      image:"https://i.pinimg.com/736x/68/fe/8d/68fe8d9c3e5f967750be00f321664640.jpg"
+      image:"https://i.pinimg.com/736x/68/fe/8d/68fe8d9c3e5f967750be00f321664640.jpg",
+      
     },
 
     {

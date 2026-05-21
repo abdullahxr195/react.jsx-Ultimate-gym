@@ -11,15 +11,15 @@ export default function Navbar() {
     <>
       <div className="navbar">
         <p className=" logo">Ultimate gym</p>
-
+          
         <div className="link">
           
-          <Button onClick={() => navigate("/about-Page")} variant="contained" color="error">About</Button>
-          <Button variant="contained" color="error">Contact</Button>
+          <Button onClick={() => navigate("/about-Page")} sx={{backgroundColor:"FireBrick", color:"AliceBlue"}}>About</Button>
+          
           {currentUser ? (
             <>
               {" "}
-              <Button variant="contained" onClick={logout}>
+              <Button variant="contained" onClick={logout} sx={{backgroundColor:"Brown"}}>
                 Logout
               </Button>
             </>
@@ -33,6 +33,7 @@ export default function Navbar() {
               </Button>
             </>
           )}
+         
         </div>
       </div>
     </>

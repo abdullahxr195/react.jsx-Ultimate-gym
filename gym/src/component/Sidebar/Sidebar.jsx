@@ -1,16 +1,22 @@
 import {
   Box,
   Divider,
+  Icon,
   IconButton,
   List,
   ListItem,
+  ListItemIcon,
   ListItemText,
   MenuItem,
+  StepIcon,
+  SvgIcon,
   Typography,
 } from "@mui/material";
 import { UserContext } from "../User page/UserContext.jsx";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ErrorIcon } from "react-hot-toast";
+
 
 export default function Sidebar({ open, toggleSidebar }) {
   const { currentUser } = useContext(UserContext);
@@ -22,7 +28,6 @@ export default function Sidebar({ open, toggleSidebar }) {
         sx={{
           display: "flex",
           flexDirection: "column",
-          bgcolor: "red",
           color: "white",
           minHeight: "100vh",
           backgroundColor:"rgba(0, 0, 0, 0.95)",  
@@ -31,7 +36,7 @@ export default function Sidebar({ open, toggleSidebar }) {
           p: 2,
         }}
       >
-        <IconButton
+        <ListItemIcon
           onClick={toggleSidebar}
           sx={{
             color: "black",
@@ -40,10 +45,10 @@ export default function Sidebar({ open, toggleSidebar }) {
           }}
         >
           <MenuItem />
-        </IconButton>
+        </ListItemIcon>
         {open ? <Typography>hello</Typography> : <Typography>hi</Typography>}
 
-        <Divider sx={{ bgcolor: "white", mb: 2 }} />
+        <Divider sx={{ bgcolor: "red", mb: 2 }} />
         <List>
           {currentUser?.role === "admin" && (
             <>
@@ -51,7 +56,7 @@ export default function Sidebar({ open, toggleSidebar }) {
                 <ListItemText
                   sx={{ cursor: "pointer" }}
                   onClick={() => navigate("/admin-dashboard")}
-                  primary={open ? "Dashboard" : "D"}
+                  primary={open ? "Home" : "H"}
                 />
               </ListItem>
 
@@ -86,7 +91,7 @@ export default function Sidebar({ open, toggleSidebar }) {
               <ListItem button component="div">
                 <ListItemText
                   sx={{ cursor: "pointer" }}
-                  primary={open ? "Dashboard" : "D"}
+                  primary={open ? "Home" : "H"}
                   onClick={() => navigate("/user-dashboard")}
                 />
               </ListItem>
