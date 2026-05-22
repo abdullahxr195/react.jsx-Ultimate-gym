@@ -12,6 +12,7 @@ import { useContext, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
+import Footer from "../../component/Footer/footer";
 
 export default function UserDashboardPage({ id, image, name, text, quantity }) {
   const navigate = useNavigate();
@@ -148,6 +149,9 @@ export default function UserDashboardPage({ id, image, name, text, quantity }) {
         </Modal>
          */}
       </Box>
+      
+
+     
     </>
   );
 }

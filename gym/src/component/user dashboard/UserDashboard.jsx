@@ -5,6 +5,7 @@ import Sidebar from "../../component/Sidebar/Sidebar.jsx";
 import Navbar from "../../component/Navbar/Navbar.jsx";
 import MenuCard from "../Menus/MenuCard.jsx";
 import UserDashboardPage from "../../Page/User/UserDashboardPage.jsx";
+import Footer from "../Footer/footer.jsx";
 
 
 export default function UserDashboard() {
@@ -126,6 +127,7 @@ export default function UserDashboard() {
           </Container>
         </Box>
       </Box>
+      <Footer/>
     </>
   );
 }

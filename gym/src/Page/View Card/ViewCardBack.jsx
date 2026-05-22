@@ -172,6 +172,8 @@ export default function ViewCardBack() {
           
         </Box>
       </Box>
+      <Footer/>
+
     </>
   );
 }

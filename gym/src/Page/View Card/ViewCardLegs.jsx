@@ -5,6 +5,7 @@ import MenuCard from "../../component/Menus/MenuCard";
 import Sidebar from "../../component/Sidebar/Sidebar";
 import Navbar from "../../component/Navbar/Navbar";
 import { useState } from "react";
+import Footer from "../../component/Footer/footer";
 
 export default function ViewCardLegs() {
     const [open, setOpen] = useState(true);
@@ -142,6 +143,7 @@ export default function ViewCardLegs() {
           </Container>
         </Box>
       </Box>
+      <Footer/>
     </>
   );
 }

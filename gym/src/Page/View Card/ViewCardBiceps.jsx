@@ -4,6 +4,7 @@ import MenuCard from "../../component/Menus/MenuCard";
 import Navbar from "../../component/Navbar/Navbar";
 import Sidebar from "../../component/Sidebar/Sidebar";
 import { useState } from "react";
+import Footer from "../../component/Footer/footer";
 export default function ViewCardBiceps() {
   const [open, setOpen] = useState(true);
   const toggleSidebar = () => {
@@ -141,6 +142,7 @@ export default function ViewCardBiceps() {
           </Container>
         </Box>
       </Box>
+      <Footer/>
     </>
   );
 }

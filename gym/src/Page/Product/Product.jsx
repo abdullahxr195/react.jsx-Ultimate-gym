@@ -136,10 +136,18 @@ export default function Product() {
                 );
               })}
             </Grid>
+            
           </Container>
           
         </Box>
       </Box>
+      
+      
+      <Footer/>
+      
+      
+      
+
     </>
   );
 }

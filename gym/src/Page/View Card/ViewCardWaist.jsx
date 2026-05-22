@@ -5,6 +5,7 @@ import MenuCard from "../../component/Menus/MenuCard";
 import { useState } from "react";
 import Sidebar from "../../component/Sidebar/Sidebar";
 import Navbar from "../../component/Navbar/Navbar";
+import Footer from "../../component/Footer/footer";
 
 export default function ViewCardWaist() {
     const [open, setOpen] = useState(true);
@@ -142,6 +143,7 @@ export default function ViewCardWaist() {
           </Container>
         </Box>
       </Box>
+      <Footer/>
     </>
   );
 }

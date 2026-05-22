@@ -3,6 +3,7 @@ import MenuCard from "../../component/Menus/MenuCard";
 import { useState } from "react";
 import Sidebar from "../../component/Sidebar/Sidebar";
 import Navbar from "../../component/Navbar/Navbar";
+import Footer from "../../component/Footer/footer";
 export default function ViewCardChest() {
     const [open, setOpen] = useState(true);
     const toggleSidebar = () => {
@@ -139,6 +140,7 @@ export default function ViewCardChest() {
           </Container>
         </Box>
       </Box>
+      <Footer/>
     </>
   );
 }
