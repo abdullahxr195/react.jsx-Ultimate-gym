@@ -23,6 +23,7 @@ import ViewCardShoulders from "./Page/View Card/ViewCardShoulders.jsx";
 import ViewCardLegs from "./Page/View Card/ViewCardLegs.jsx";
 import ViewCardWaist from "./Page/View Card/ViewCardWaist.jsx";
 import AboutPage from "./Page/About/AboutPage.jsx";
+import Product from "./Page/Product/Product.jsx";
 
 
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="/view-card-legs" element={<ViewCardLegs />} />
         <Route path="/view-card-waist" element={<ViewCardWaist />} />
         <Route path="/about-Page" element={<AboutPage />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </>
   );

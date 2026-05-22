@@ -60,6 +60,20 @@ export default function Sidebar({ open, toggleSidebar }) {
                 />
               </ListItem>
 
+
+
+               <ListItem button>
+                <ListItemText
+                  sx={{ cursor: "pointer" }}
+                  primary={open ? "Product" : "Pr"}
+                  onClick={() => navigate ("/product")}
+                 
+                />
+              </ListItem>
+
+
+
+
               <ListItem button>
                 <ListItemText
                   sx={{ cursor: "pointer" }}
@@ -83,6 +97,8 @@ export default function Sidebar({ open, toggleSidebar }) {
                   onClick={() => navigate("/Profile")}
                 />
               </ListItem>
+
+              
             </>
           )}
 
@@ -96,13 +112,14 @@ export default function Sidebar({ open, toggleSidebar }) {
                 />
               </ListItem>
 
-              {/* <ListItem button>
+              <ListItem button>
                 <ListItemText
                   sx={{ cursor: "pointer" }}
-                  primary={open ? "Users" : "U"}
+                  primary={open ? "Product" : "Pr"}
+                  onClick={() => navigate ("/product")}
                  
                 />
-              </ListItem> */}
+              </ListItem>
 
               <ListItem button>
                 <ListItemText

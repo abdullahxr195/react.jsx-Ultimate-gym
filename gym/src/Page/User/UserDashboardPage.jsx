@@ -13,47 +13,38 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 
-export default function UserDashboardPage({id ,image, name, text ,quantity}) {
+export default function UserDashboardPage({ id, image, name, text, quantity }) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  const [userQuantity , setUserQuantity] = useState(0) 
+  const [userQuantity, setUserQuantity] = useState(0);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const increaseQuantity = () => {
+    setUserQuantity(userQuantity + 1);
+  };
 
-    setUserQuantity(userQuantity + 1)
-
-  }
-
-  const decreaseQuantity =() => {
-    if(userQuantity > 1){
-    setUserQuantity(userQuantity - 1)
+  const decreaseQuantity = () => {
+    if (userQuantity > 1) {
+      setUserQuantity(userQuantity - 1);
     }
-  }
+  };
 
-  const item ={
- id,
- name,
- quantity
+  const item = {
+    id,
+    name,
+    quantity,
+  };
 
+  const { addToCart } = useContext(CartContext);
 
-  }
-  
-  
-  const{addToCart} = useContext(CartContext);
-
-
-const addQuantity = () => {
-  setUserQuantity((q) => q + 1)
-  addToCart({ item ,userQuantity})
-
-  }
+  const addQuantity = () => {
+    setUserQuantity((q) => q + 1);
+    addToCart({ item, userQuantity });
+  };
   return (
     <>
-    
-    
       <Box
         sx={{
           minWidth: "55vh",
@@ -118,7 +109,7 @@ const addQuantity = () => {
             </Button> */}
           </CardActions>
         </Card>
-{/* 
+        {/* 
         <Modal open={open} onClose={handleClose}>
           <Box
             sx={{

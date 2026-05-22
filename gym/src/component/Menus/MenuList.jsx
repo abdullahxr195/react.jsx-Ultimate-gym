@@ -28,8 +28,8 @@ export default function MenuList() {
         <Card
           sx={{
             maxWidth: 380,
-            borderRadius: 3,
             boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+            borderRadius:10,
             transition: "transform 0.3s ease-in-out",
             "&:hover": {
               transform: "translateY(-5px)",
