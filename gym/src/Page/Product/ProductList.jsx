@@ -57,7 +57,6 @@ export default function ProductList({ image, name ,video ,text}) {
             alt="Athlete working out in a modern gym"
             height="150%"
             height="400px"
-            objectFit="contain"
             title="Gym Workout"
           />
           <CardContent>

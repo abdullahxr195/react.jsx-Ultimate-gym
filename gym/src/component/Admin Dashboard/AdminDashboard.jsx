@@ -28,7 +28,7 @@ export default function AdminDashboard() {
         <Box sx={{ flexGrow: 1 }}>
           
           <UserDashboard/>
-          <Footer/>
+          
         </Box>
       </Box>
     </>

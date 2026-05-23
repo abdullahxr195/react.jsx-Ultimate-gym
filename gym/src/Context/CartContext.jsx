@@ -41,7 +41,7 @@ else{
 return(<>
 
 <CartContext.Provider value={cart ,addToCart}>{children}</CartContext.Provider>
-
+ 
 </>)
 
 
