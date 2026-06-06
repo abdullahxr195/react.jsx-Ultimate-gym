@@ -87,7 +87,7 @@ export const UserProvider = ({ children }) => {
       name: formData.name,
       email: formData.email,
       password: formData.password,
-      role: "user",
+      role: "admin",
     };
 
     const updatedUsers = [...allUsers, newUser];
