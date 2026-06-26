@@ -74,7 +74,7 @@ export default function MenuCard({ image, name ,video ,text}) {
             <Typography
               variant="body2"
               color="text.secondary"
-              sx={{ lineHeight: 1.6 ,color:"#ff4103",  fontSize:15,}}
+              sx={{ lineHeight: 1.6 ,color:"#ffffff",  fontSize:15,}}
             >
               {text}
             </Typography>

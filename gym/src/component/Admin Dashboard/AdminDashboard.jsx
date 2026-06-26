@@ -23,8 +23,6 @@ export default function AdminDashboard() {
           justifyContent: "center",
         }}
       >
-        
-
         <Box sx={{ flexGrow: 1 }}>
           
           <UserDashboard/>

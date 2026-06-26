@@ -119,6 +119,7 @@ export const UserProvider = ({ children }) => {
       return;
     }
 
+
     if (!allowedRoles.includes(userData.role.toLowerCase())) {
       toast.error("The Role must be user or admin only!");
       return;
