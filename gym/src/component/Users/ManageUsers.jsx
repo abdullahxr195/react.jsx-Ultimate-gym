@@ -135,7 +135,7 @@ export default function ManageUsers() {
                       <TableCell>
                         <TextField
                           label="name"
-                          value={user?.name}
+                          value={updatedUser.name}
                           onChange={(e) =>
                             setUpdatedUser({
                               ...updatedUser,
@@ -150,7 +150,7 @@ export default function ManageUsers() {
                       <TableCell>{user?.email}</TableCell>
                     ) : (
                       <TableCell>
-                        <TextField label="email"   value={user?.email}
+                        <TextField label="email"   value={updatedUser.email}
                           onChange={(e) =>
                             setUpdatedUser({
                               ...updatedUser,
@@ -164,7 +164,7 @@ export default function ManageUsers() {
                       <TableCell>{user?.role}</TableCell>
                     ) : (
                       <TableCell>
-                        <TextField label="role"   value={user?.role}
+                        <TextField label="role"   value={updatedUser.role}
                           onChange={(e) =>
                             setUpdatedUser({
                               ...updatedUser,

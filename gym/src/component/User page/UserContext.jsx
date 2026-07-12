@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     const existedUsers = JSON.parse(localStorage.getItem("users"));
@@ -126,7 +127,7 @@ export const UserProvider = ({ children }) => {
     }
 
     if (userData.password.length < 8) {
-      toast.error("Password must be at least 8 characters long");
+      toast.error("Password must be at least 8 characters long") ;
       return;
     }
 
@@ -168,6 +169,32 @@ export const UserProvider = ({ children }) => {
     toast.success("updated Successfully");
   };
 
+ const addNewCard =(cardData) =>{
+   if (
+      !cardData.name ||
+      !cardData.text ||
+      !cardData.img
+    
+    ) {
+      toast.error("all fields are required");
+      return;
+    }
+   
+
+const NewCard ={
+id:Date.now(),
+name:cardData.name,
+text:cardData.text,
+img:cardData.img
+}
+const[cards , setCards]=useState([]);
+ const allCard = JSON.parse(localStorage.getItem("cards")) || [];
+ const updatedCard=[...addNewCard,NewCard];
+    
+localStorage.setItem("cards", JSON.stringify(updatedCard))
+setCards(updatedCard)
+
+ }
   return (
     <UserContext.Provider
       value={{
@@ -179,6 +206,7 @@ export const UserProvider = ({ children }) => {
         deleteUsers,
         addNewUser,
         updateUser,
+        addNewCard
       }}
     >
       {children}

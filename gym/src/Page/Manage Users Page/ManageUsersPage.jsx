@@ -21,6 +21,7 @@ export default function ManageUsersPage() {
           justifyContent: "space-between",
         }}
       >
+        
         <Sidebar
           open={open}
           toggleSidebar={toggleSidebar}
@@ -29,6 +30,7 @@ export default function ManageUsersPage() {
 
         <Box sx={{ flexGrow: 1 }}>
           <Navbar />
+
           <ManageUsers />
         </Box>
       </Box>

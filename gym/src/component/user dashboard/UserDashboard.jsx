@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Paper, TextField, Typography } from "@mui/material";
 import { UserContext } from "../User page/UserContext.jsx";
 import { useContext, useState } from "react";
 import Sidebar from "../../component/Sidebar/Sidebar.jsx";
@@ -14,10 +14,24 @@ export default function UserDashboard() {
     setOpen(!open);
   };
 
-  const { currentUser } = useContext(UserContext);
+  const { currentUser,addNewCard } = useContext(UserContext);
   console.log(currentUser);
 
 
+  const[openForm, setOpenForm]=useState(false)
+ const [newCard, setNewCard] = useState({
+    name: "",
+    text: "",
+    img: "",
+   
+  });
+
+
+  
+  const handleAddCard = () => {
+    addNewCard(newCard);
+    setOpenForm(false);
+  };
 
   const menuList = [
     {
@@ -94,6 +108,8 @@ export default function UserDashboard() {
     },
   ];
 
+
+  
   return (
     <>
       <Box
@@ -112,7 +128,43 @@ export default function UserDashboard() {
 
         <Box sx={{ flexGrow: 1 }}>
           <Navbar />
+          <Button variant="contained" color="error" onClick={()=> setOpenForm(!openForm)}>{openForm ? "Cancel" : "Add New Card"}</Button>
+          {openForm &&<>
+          
+          <Paper>
+                <TextField
+                  label="Name"
+                  value={newUser.name}
+                  onChange={(e) =>
+                    setNewCard({ ...newUser, name: e.target.value })
+                  }
+                />
 
+                <TextField
+                  label="text"
+                  value={newUser.text}
+                  onChange={(e) =>
+                    setNewCard({ ...newUser, text: e.target.value })
+                  }
+                />
+
+                <TextField
+                  label="image"
+                  value={newUser.img}
+                  onChange={(e) =>
+                    setNewCard({ ...newUser, img: e.target.value })
+                  }
+                />
+          
+
+
+          <Button variant="contained" color="error" onClick={handleAddCard }>Add</Button>
+            </Paper>
+          
+          
+          
+          
+          </>}
           <Container sx={{ py: 8 }}>
             <Typography variant="h1"></Typography>
             <Grid container spacing={6}>
