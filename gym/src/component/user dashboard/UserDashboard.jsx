@@ -117,6 +117,7 @@ export default function UserDashboard() {
           display: "flex",
           flexDirection: "row",
           minHeight: "100vh",
+          maxWidth:"300vh",
           justifyContent: "center",
         }}
       >
@@ -128,7 +129,7 @@ export default function UserDashboard() {
 
         <Box sx={{ flexGrow: 1 }}>
           <Navbar />
-          <Button variant="contained" color="error" onClick={()=> setOpenForm(!openForm)}>{openForm ? "Cancel" : "Add New Card"}</Button>
+          {/* <Button variant="contained" color="error" onClick={()=> setOpenForm(!openForm)}>{openForm ? "Cancel" : "Add New Card"}</Button>
           {openForm &&<>
           
           <Paper>
@@ -164,7 +165,7 @@ export default function UserDashboard() {
           
           
           
-          </>}
+          </>} */}
           <Container sx={{ py: 8 }}>
             <Typography variant="h1"></Typography>
             <Grid container spacing={6}>
